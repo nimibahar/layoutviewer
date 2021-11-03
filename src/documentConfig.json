@@ -1,0 +1,155 @@
+{
+  "rows": {
+    "1": {
+      "columns": [
+        {
+          "componentName": "Text",
+          "uniqueKeyName": "column1text",
+          "attributes": {
+            "title": "1st Text Comp",
+            "content": "1st Text Comp content"
+          },
+          "columnSpan": 6
+        },
+        {
+          "componentName": "LayoutViewer",
+          "uniqueKeyName": "column2layout",
+          "attributes": {
+            "rows": {
+              "1": {
+                "blockType": "column",
+                "columns": [
+                  {
+                    "componentName": "Text",
+                    "uniqueKeyName": "column2text",
+                    "attributes": {
+                      "title": "rlktmglkrm",
+                      "content": "lrkmglkmlkm"
+                    },
+                    "columnSpan": 6
+                  },
+                  {
+                    "componentName": "Quote",
+                    "uniqueKeyName": "column2quote",
+                    "attributes": {
+                      "cite": "Aldous Huxley",
+                      "quote": "Some short qoute by the king of kings"
+                    },
+                    "columnSpan": 6
+                  }
+                ]
+              }
+            }
+          },
+          "columnSpan": 4
+        },
+        {
+          "componentName": "Html",
+          "uniqueKeyName": "column2Html",
+          "attributes": {
+            "htmlString": "<ul><li>This unordered list has been transformed</li><li>into an ordered list</li></ul>"
+          },
+          "columnSpan": 2
+        }
+      ]
+    },
+    "2": {
+      "columns": [
+        {
+          "componentName": "Image",
+          "uniqueKeyName": "column2image",
+          "attributes": {
+            "url": "https://www.peterandmay.com/img/lookbook/09-09-2021-173057product-image.jpg",
+            "caption": "sunglasses",
+            "altText": "sunglasses"
+          },
+          "columnSpan": 6
+        },
+        {
+          "componentName": "Text",
+          "uniqueKeyName": "column2Text",
+          "attributes": {
+            "title": "2nd Text Comp",
+            "content": "2nd Text Comp content"
+          },
+          "columnSpan": 6
+        }
+      ]
+    },
+    "3": {
+      "columns": [
+        {
+          "componentName": "Quote",
+          "uniqueKeyName": "column1quote",
+          "attributes": {
+            "cite": "Aldous Huxley",
+            "quote": "The man who comes back through the door in the wall will never be quite the same as the man who went out."
+          },
+          "columnSpan": 4
+        },
+        {
+          "componentName": "Html",
+          "uniqueKeyName": "column2Html",
+          "attributes": {
+            "htmlString": "<ul><li>This unordered list has been transformed</li><li>into an ordered list</li></ul>"
+          },
+          "columnSpan": 4
+        },
+        {
+          "componentName": "Collapsable",
+          "uniqueKeyName": "column3Collapsable",
+          "attributes": {
+            "contentTypeComponent": "Html", 
+            "contentAttributes": {
+              "htmlString": "<Ol><li>This ordered list</li><li>is collapsable</li></Ol>"
+              
+            },
+            "title": "collapse heading"
+          },
+          "columnSpan": 4
+        }
+      ]
+    },
+    "4": {
+      "columns": [
+        {
+          "componentName": "Table",
+          "uniqueKeyName": "row4table",
+          "attributes": {
+            "columns": [
+              {
+                "header": "TV Show",
+                "accessor": "name"
+              },
+              {
+                "header": "Type",
+                "accessor": "type"
+              },
+              {
+                "header": "Language",
+                "accessor": "language"
+              }
+            ],
+            "data": [
+              {
+                "name": "Sienfeld",
+                "type": "Comedy",
+                "language": "English",
+                "keyId": "smgUnique"
+              },
+              {
+                "name": "Sienfeld",
+                "type": "Comedy",
+                "language": "English",
+                "keyId": "smgUnique2"
+              }
+            ],
+            "title": "2nd Text Comp",
+            "content": "2nd Text Comp content"
+          },
+          "columnSpan": 6
+        }
+      ]
+    }
+  }
+}

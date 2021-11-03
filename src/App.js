@@ -1,25 +1,39 @@
-import logo from './logo.svg';
+import { useState } from 'react';
+import { Modal, ModalBody } from 'reactstrap';
 import './App.css';
+import styles from './style.module.scss'
+import LayoutViewer from './components/LayoutViewer';
+import documentConfig from "./documentConfig";
 
-function App() {
+export default function App() {
+  const [showModal, setShowModal] =  useState(false)
+  const [readMode, setReadMode] = useState(true);
+
+  const handleChangeModeClick = () => {
+    if (readMode) {
+      return setReadMode(false);
+    }
+    setShowModal(true);
+  }
+
+  const handleModalAction = () => {
+    setReadMode(!readMode)
+    setShowModal(false);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Modal isOpen={showModal} toggle={() => setShowModal(!showModal)}>
+        <ModalBody className={styles.ModeToggler}>
+          <span>Switching from edit to read mode will copy the json structure to clipboard</span>
+          <button onClick={handleModalAction}>Copy!</button>
+        </ModalBody>
+      </Modal>
+      <div className={styles.ModeToggler}>
+        <span>{`current mode: ${readMode ? 'read' : 'edit'}`}</span>
+        <button onClick={handleChangeModeClick}>Switch mode</button>
+      </div>
+      <LayoutViewer attributes={documentConfig} readMode={readMode} />
     </div>
   );
 }
-
-export default App;

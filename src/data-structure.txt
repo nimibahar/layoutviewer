@@ -1,0 +1,13 @@
+{
+  rows: {
+    id: { 
+      blockType?: string
+      columns: {
+        componentName: Text | LayoutViewer | Quote | Html | Image | Table
+        uniqueKeyName: string
+        attributes: Object
+        columnSpan: number
+      }[]
+    }
+  }
+}

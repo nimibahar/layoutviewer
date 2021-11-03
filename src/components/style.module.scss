@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css?family=Special+Elite');
+
+$defaultPadding: 10px;
+$tablePrimaryGreen: #19d119;
+
+.Image {
+  width: 100%;
+  text-align: left;
+  padding: $defaultPadding;
+  img {
+    height: auto;
+    width: 100%;
+  }
+}
+
+.Text {
+  text-align: left;
+  padding: $defaultPadding;
+}
+
+.Quote {
+  padding: $defaultPadding;
+  blockquote {
+    font-size: 18px;
+    position: relative;
+    padding: $defaultPadding;
+    text-align: left;
+  }
+  
+  cite {
+    text-align: left;
+    padding-left: 20px;
+
+  }
+}
+
+@mixin quoteTag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  background-color: #d5cfcf;
+  border-radius: 50%;
+  padding-top: $defaultPadding;
+  span {
+    font-family: 'Special Elite';
+    padding-top: 16px;
+    font-size: 40px;
+    color: #3572ae9c;
+  }
+}
+
+.OpenQuote {
+  @include quoteTag   
+}
+
+.CloseQuote {
+  @include quoteTag   
+}
+
+@mixin flexColumnStart {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.QuoteContent {
+  @include flexColumnStart;
+  margin-bottom: $defaultPadding;
+}
+
+.AccordionWrapper {
+  @include flexColumnStart;
+}
+
+@mixin AccordionItem {
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(1, 0, 1, 0);
+  height: auto;
+  max-height: 9999px;
+}
+
+.AccordionItemExpanded {
+  @include AccordionItem;
+}
+
+.AccordionItemCollapsed {
+  @include AccordionItem;
+  max-height: 0;
+  transition: max-height 0.35s cubic-bezier(0, 1, 0, 1);
+}
+
+.TableWrapper {
+  padding: 1rem;
+
+  table {
+    border-spacing: 0;
+    border: 1px solid $tablePrimaryGreen;
+
+    thead {
+      tr {
+        background-color: $tablePrimaryGreen;
+        font-weight: 600;
+        color: white;
+      }
+    }
+
+    tr {
+      :last-child {
+        td {
+          border-bottom: 0;
+        }
+      }
+    }
+
+    th,
+    td {
+      margin: 0;
+      padding: 0.5rem;
+      border-bottom: 1px solid $tablePrimaryGreen;
+      border-right: 1px solid $tablePrimaryGreen;
+
+      :last-child {
+        border-right: 0;
+      }
+    }
+  }
+}
+
+.EvenTableRow {
+  background-color: white
+}
+
+.OddTableRow {
+  background-color: #d1f1d1
+}
